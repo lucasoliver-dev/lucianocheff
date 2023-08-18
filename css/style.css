@@ -232,6 +232,10 @@ button:focus {
     height: 100%;
 }
 
+#home-box {
+    box-shadow: 7px 7px 10px #0a0909;
+}
+
 
 /*==========================
         3.NAVBAR CUSTOM
