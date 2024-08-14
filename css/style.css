@@ -688,6 +688,7 @@ button:focus {
     }
     .custom-nav.opened .navbar-toggler {
         color: #fff; /* Ícone de menu branco ao abrir */
+        background-color: #000;
     }
 
     .custom-nav .logo .logo-dark {
