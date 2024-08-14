@@ -637,21 +637,34 @@
             const scroll = new LocomotiveScroll({
               el: document.querySelector('[data-scroll-container]'),
               smooth: true,
-              offset: [0, 100], // Ajuste conforme necessário
-              lerp: 0.1, // Reduza o valor para aumentar a responsividade
+              offset: [0, 60] // Ajuste conforme necessário
             });
 
-            // Atualiza o scroll quando um link de navegação é clicado
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-              anchor.addEventListener('click', (e) => {
-                e.preventDefault();
-                const target = document.querySelector(anchor.getAttribute('href'));
-                scroll.scrollTo(target);
-              });
-            });
+            // Função para atualizar o logo e a classe do navbar com base na rolagem
+            const updateNavbar = () => {
+              const scrollY = scroll.scroll.instance.scroll.y;
+              const navbar = document.querySelector('.custom-nav');
+              const lightLogo = document.querySelector('.logo-light');
+              const darkLogo = document.querySelector('.logo-dark');
 
+              if (scrollY > 100) { // Ajuste o valor conforme necessário
+                navbar.classList.add('stickyadd');
+                lightLogo.style.display = 'none';
+                darkLogo.style.display = 'inline-block';
+              } else {
+                navbar.classList.remove('stickyadd');
+                lightLogo.style.display = 'inline-block';
+                darkLogo.style.display = 'none';
+              }
+            };
+
+            // Atualiza o navbar na rolagem
+            scroll.on('scroll', updateNavbar);
+
+            // Atualiza o navbar após o carregamento da página
             window.addEventListener('load', () => {
               scroll.update();
+              updateNavbar(); // Atualiza o navbar inicialmente
             });
           });
     </script>
