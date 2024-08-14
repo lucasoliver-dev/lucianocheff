@@ -33,6 +33,8 @@
 body {
     font-family: 'Nunito', sans-serif;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -53,6 +55,13 @@ button:focus {
     outline: none !important;
     box-shadow: none !important;
 }
+
+[data-scroll-container] {
+    height: auto !important;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
 
 ::selection {
     background: rgba(166, 175, 189, 0.3);

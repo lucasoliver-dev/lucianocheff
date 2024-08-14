@@ -704,6 +704,28 @@
                     offset: [0, 0] // Ajuste conforme necessário
                 });
 
+                // Função para recalibrar o scroll ao carregar o conteúdo
+                const recalibrateScroll = () => {
+                    const body = document.body;
+                    const html = document.documentElement;
+                    const pageHeight = Math.max(body.scrollHeight, body.offsetHeight,
+                                                html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+                    // Verifica se o scroll excede a altura da página
+                    if (window.innerHeight >= pageHeight) {
+                        scroll.update(); // Atualiza a instância do scroll
+                    }
+                };
+
+                // Recalibra a altura do scroll após o carregamento da página
+                window.addEventListener('load', () => {
+                    scroll.update();
+                    recalibrateScroll(); // Recalibra o scroll inicialmente
+                });
+
+                // Atualiza o navbar na rolagem
+                scroll.on('scroll', updateNavbar);
+
                 // Função para atualizar o logo e a classe do navbar com base na rolagem
                 const updateNavbar = () => {
                     const scrollY = scroll.scroll.instance.scroll.y;
@@ -721,15 +743,6 @@
                         darkLogo.style.display = 'none';
                     }
                 };
-
-                // Atualiza o navbar na rolagem
-                scroll.on('scroll', updateNavbar);
-
-                // Atualiza o navbar após o carregamento da página
-                window.addEventListener('load', () => {
-                    scroll.update();
-                    updateNavbar(); // Atualiza o navbar inicialmente
-                });
             });
         </script>
         <script src="js/bootstrap.bundle.min.js"></script>
