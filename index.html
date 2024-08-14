@@ -660,109 +660,109 @@
         </footer>
         <!--END FOOTER-->
     </div>
-     <!-- Back To Top -->
-     <a href="#" class="back_top"> <i class="mdi mdi-chevron-up"> </i> </a>
+    <!-- Back To Top -->
+    <a href="#" class="back_top"> <i class="mdi mdi-chevron-up"> </i> </a>
 
-     <!-- START SWITCHER -->
-     <div id="color-switcher" style="left: 0px;">
-         <div>
-             <h3 class="fw-bold text-center">Select your color</h3>
-             <ul class="pattern">
-                 <li>
-                     <a class="color1" href="#"></a>
-                 </li>
-                 <li>
-                     <a class="color2" href="#"></a>
-                 </li>
-                 <li>
-                     <a class="color3" href="#"></a>
-                 </li>
-                 <li>
-                     <a class="color4" href="#"></a>
-                 </li>
-                 <li>
-                     <a class="color5" href="#"></a>
-                 </li>
-                 <li>
-                     <a class="color6" href="#"></a>
-                 </li>
-             </ul>
-         </div>
-         <div class="bottom">
-             <a href="#" class="settings rounded-right"><i class="mdi mdi-settings mdi-spin"></i></a>
-         </div>
-     </div>
-     <!-- END SWITCHER -->
+    <!-- START SWITCHER -->
+    <div id="color-switcher" style="left: 0px;">
+        <div>
+            <h3 class="fw-bold text-center">Select your color</h3>
+            <ul class="pattern">
+                <li>
+                    <a class="color1" href="#"></a>
+                </li>
+                <li>
+                    <a class="color2" href="#"></a>
+                </li>
+                <li>
+                    <a class="color3" href="#"></a>
+                </li>
+                <li>
+                    <a class="color4" href="#"></a>
+                </li>
+                <li>
+                    <a class="color5" href="#"></a>
+                </li>
+                <li>
+                    <a class="color6" href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <a href="#" class="settings rounded-right"><i class="mdi mdi-settings mdi-spin"></i></a>
+        </div>
+    </div>
+    <!-- END SWITCHER -->
 </body>
 
 
 </html>
 
-        <!--All Javascript -->
-        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"></script>
-        <script>
-            // Inicializando Locomotive Scroll
-            document.addEventListener('DOMContentLoaded', () => {
-                const scroll = new LocomotiveScroll({
-                    el: document.querySelector('[data-scroll-container]'),
-                    smooth: true,
-                    offset: [0, 60] // Ajuste conforme necessário
-                });
+<!--All Javascript -->
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"></script>
+<script>
+    // Inicializando Locomotive Scroll
+    document.addEventListener('DOMContentLoaded', () => {
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+            offset: [0, 60] // Ajuste conforme necessário
+        });
 
-                // Função para atualizar o logo e a classe do navbar com base na rolagem
-                const updateNavbar = () => {
-                    const scrollY = scroll.scroll.instance.scroll.y;
-                    const navbar = document.querySelector('.custom-nav');
-                    const lightLogo = document.querySelector('.logo-light');
-                    const darkLogo = document.querySelector('.logo-dark');
+        // Função para atualizar o logo e a classe do navbar com base na rolagem
+        const updateNavbar = () => {
+            const scrollY = scroll.scroll.instance.scroll.y;
+            const navbar = document.querySelector('.custom-nav');
+            const lightLogo = document.querySelector('.logo-light');
+            const darkLogo = document.querySelector('.logo-dark');
 
-                    if (scrollY > 100) { // Ajuste o valor conforme necessário
-                        navbar.classList.add('stickyadd');
-                        lightLogo.style.display = 'none';
-                        darkLogo.style.display = 'inline-block';
-                    } else {
-                        navbar.classList.remove('stickyadd');
-                        lightLogo.style.display = 'inline-block';
-                        darkLogo.style.display = 'none';
-                    }
-                };
+            if (scrollY > 100) { // Ajuste o valor conforme necessário
+                navbar.classList.add('stickyadd');
+                lightLogo.style.display = 'none';
+                darkLogo.style.display = 'inline-block';
+            } else {
+                navbar.classList.remove('stickyadd');
+                lightLogo.style.display = 'inline-block';
+                darkLogo.style.display = 'none';
+            }
+        };
 
-                // Atualiza o navbar na rolagem
-                scroll.on('scroll', updateNavbar);
+        // Atualiza o navbar na rolagem
+        scroll.on('scroll', updateNavbar);
 
-                // Atualiza o navbar após o carregamento da página
-                window.addEventListener('load', () => {
-                    scroll.update();
-                    updateNavbar(); // Atualiza o navbar inicialmente
-                });
-            });
-        </script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/jquery.min.js"></script>
+        // Atualiza o navbar após o carregamento da página
+        window.addEventListener('load', () => {
+            scroll.update();
+            updateNavbar(); // Atualiza o navbar inicialmente
+        });
+    });
+</script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.min.js"></script>
 
-        <!-- Text Type -->
-        <script src="js/typed.js"></script>
+<!-- Text Type -->
+<script src="js/typed.js"></script>
 
-        <!-- Owl Carousel -->
-        <script src="js/owl.carousel.min.js"></script>
+<!-- Owl Carousel -->
+<script src="js/owl.carousel.min.js"></script>
 
-        <!-- Switcher Js -->
-        <script src="js/switcher.js"></script>
+<!-- Switcher Js -->
+<script src="js/switcher.js"></script>
 
-        <!-- Work Filter -->
-        <script src="js/isotope.js"></script>
+<!-- Work Filter -->
+<script src="js/isotope.js"></script>
 
-        <!-- Magnific Popup Js -->
-        <script src="js/jquery.magnific-popup.min.js"></script>
+<!-- Magnific Popup Js -->
+<script src="js/jquery.magnific-popup.min.js"></script>
 
-        <!-- Custom Js -->
-        <script src="js/custom.js"></script>
-        <script>
-            var typed = new Typed('.element', {
-                strings: ["Luvi desenvolvimento.", "Potencialize Resultados."],
-                typeSpeed: 120,
-                backSpeed: 60,
-                backDelay: 3000,
-                loop: true
-            });
-        </script>
+<!-- Custom Js -->
+<script src="js/custom.js"></script>
+<script>
+    var typed = new Typed('.element', {
+        strings: ["Luvi desenvolvimento.", "Potencialize Resultados."],
+        typeSpeed: 120,
+        backSpeed: 60,
+        backDelay: 3000,
+        loop: true
+    });
+</script>
