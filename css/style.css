@@ -706,7 +706,7 @@ button:focus {
         color: rgba(0, 0, 0, 0.6) !important;
     }
     .custom-nav .logo .logo-light {
-        display: none;
+        display: inline-block;
     }
     .h-100vh {
         height: auto;
