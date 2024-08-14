@@ -683,6 +683,12 @@ button:focus {
     .custom-nav.stickyadd .navbar-toggler {
         color: #000; /* Cor preta para o botão de toggle quando stickyadd está ativo */
     }
+    .custom-nav.opened {
+        background-color: #000 !important; /* Fundo preto ao abrir o menu */
+    }
+    .custom-nav.opened .navbar-toggler {
+        color: #fff; /* Ícone de menu branco ao abrir */
+    }
 
     .custom-nav .logo .logo-dark {
         display: inline-block;
