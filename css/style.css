@@ -685,7 +685,7 @@ button:focus {
     }
 
     .custom-nav .navbar-toggler {
-        color: #fff; /* Ícone de menu branco */
+        color: #fff;
         font-size: 32px;
         border: none;
     }
@@ -702,13 +702,17 @@ button:focus {
         color: #fff; /* Ícone de menu branco ao abrir */
     }
 
-    /* Logo em dispositivos móveis */
-    .custom-nav .logo .logo-dark {
-        display: none; /* Ocultar logo escuro inicialmente */
+    /* Exibir logo escuro e ocultar logo claro quando stickyadd está ativo */
+    .custom-nav .logo .logo-light {
+        display: none;
     }
 
-    .custom-nav .logo .logo-light {
-        display: inline-block; /* Exibir logo claro */
+    .custom-nav.stickyadd .logo .logo-dark {
+        display: inline-block;
+    }
+
+    .custom-nav .logo .logo-dark {
+        display: none;
     }
 
     /* Ajustes adicionais */
