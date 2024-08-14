@@ -669,6 +669,12 @@ button:focus {
         background-color: #fff !important;
         padding: 10px 0px !important;
     }
+
+    .custom-nav.stickyadd {
+        background-color:transparent !important; /* Força a cor de fundo quando stickyadd está ativo */
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    }
+
     .custom-nav .navbar-toggler {
         color: #000;
         font-size: 32px;
