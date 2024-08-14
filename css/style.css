@@ -29,6 +29,10 @@
         1.BASIC
 ========================*/
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Nunito', sans-serif;
     overflow-x: hidden;
