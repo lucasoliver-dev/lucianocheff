@@ -675,59 +675,62 @@ button:focus {
 
 @media (min-width: 200px) and (max-width: 768px) {
     .custom-nav {
-        background-color:transparent !important;
+        background-color: transparent !important;
         padding: 10px 0px !important;
     }
 
     .custom-nav.stickyadd {
-        background-color:#fff !important; /* Força a cor de fundo quando stickyadd está ativo */
+        background-color: #fff !important; /* Fundo branco quando stickyadd está ativo */
         box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
     }
+
     .custom-nav .navbar-toggler {
-        color: #fff;
+        color: #fff; /* Ícone de menu branco */
         font-size: 32px;
         border: none;
     }
 
     .custom-nav.stickyadd .navbar-toggler {
-        color: #000; /* Cor preta para o botão de toggle quando stickyadd está ativo */
+        color: #000; /* Ícone de menu preto quando stickyadd está ativo */
     }
+
     .custom-nav.opened {
         background-color: #000 !important; /* Fundo preto ao abrir o menu */
     }
+
     .custom-nav.opened .navbar-toggler {
         color: #fff; /* Ícone de menu branco ao abrir */
     }
 
+    /* Logo em dispositivos móveis */
     .custom-nav .logo .logo-dark {
-        display: inline-block;
+        display: none; /* Ocultar logo escuro inicialmente */
     }
+
+    .custom-nav .logo .logo-light {
+        display: inline-block; /* Exibir logo claro */
+    }
+
+    /* Ajustes adicionais */
     .custom-nav .navbar-nav li a {
         color: rgba(0, 0, 0, 0.6) !important;
     }
-    .custom-nav .logo .logo-light {
-        display: inline-block;
-    }
-    .h-100vh {
+
+    .h-100vh, .header-bg-img, .wave-home.h-100vh {
         height: auto;
-        padding: 120px 0 150px;
+        padding: 120px 0 150px; /* Ajuste o padding conforme necessário */
     }
-    .header-bg-img {
-        clip-path: none;
-        padding: 120px 0 150px;
-    }
-    .wave-home.h-100vh{
-        height: auto;
-        padding: 120px 0 190px;
-    }
+
     .custom-nav .navbar-nav li a {
-        margin: 0 0px;
+        margin: 0;
         line-height: 15px;
     }
+
     .header-name {
         font-size: 38px;
     }
-    .clip-home{
+
+    .clip-home {
         clip-path: none;
     }
 }
